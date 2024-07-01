@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    {% if session.get('logged_in') %}
+        <nav>
+            <a href="{{ url_for('admin_panel') }}">Admin Panel</a>
+            <a href="{{ url_for('api_keys') }}">API-Schlüssel</a>
+            <a href="{{ url_for('users') }}">Benutzer</a>
+            <a href="{{ url_for('data') }}">Daten</a>  
+            <a href="{{ url_for('logout') }}">Logout</a>
+            <form id="search-form" method="GET" action="/search">
+                <input type="text" id="search-query" name="query" placeholder="Suche...">
+                <button type="submit">Suche</button>
+            </form>
+        </nav>
+    {% else %}
+        <a href="{{ url_for('login') }}">Login</a> |
+        <a href="{{ url_for('register') }}">Registrieren</a>
+    {% endif %}
+
+    {% with messages = get_flashed_messages(with_categories=True) %}
+        {% if messages %}
+            {% for category, message in messages %}
+                <div class="flash-message {{ category }}">{{ message }}</div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+
+    {% block content %}{% endblock %}
+</body>
+</html>

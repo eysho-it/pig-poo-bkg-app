@@ -1,0 +1,11 @@
+## Verwendung
+
+1. **Öffnen Sie die App:** Nach der Bereitstellung erhalten Sie eine URL von Deta Space. Öffnen Sie diese URL in Ihrem Browser.
+
+2. **Anmelden:** Melden Sie sich mit dem von Ihnen festgelegten Admin-Benutzernamen und -Passwort an.
+
+3. **Admin-Dashboard:** Verwenden Sie das Dashboard, um Deta Space-Befehle auszuführen, Logs anzuzeigen, API-Schlüssel zu verwalten und Benutzerkonten zu erstellen und zu bearbeiten.
+
+4. **API-Schlüsselverwaltung:** Generieren Sie API-Schlüssel für den programmgesteuerten Zugriff auf Ihre Anwendung. Legen Sie Berechtigungen für jeden Schlüssel fest, um den Zugriff auf bestimmte Funktionen zu kontrollieren.
+
+5. **Benutzerverwaltung:** Erstellen Sie neue Benutzerkonten, bearbeiten Sie bestehende Konten und weisen Sie ihnen Rollen und Berechtigungen zu.

@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}Registrieren{% endblock %}
+
+{% block content %}
+    <h1>Registrieren</h1>
+
+    <form method="POST">
+        <input type="hidden" name="csrf_token" value="{{ csrf.generate_csrf_token() }}">
+        <input type="text" name="username" placeholder="Benutzername" required>
+        <input type="password" name="password" placeholder="Passwort" required>
+        <input type="email" name="email" placeholder="E-Mail" required>
+        <button type="submit">Registrieren</button>
+    </form>
+
+    <a href="{{ url_for('login') }}">Bereits registriert? Hier einloggen</a>
+{% endblock %}

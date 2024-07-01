@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %}Admin Panel{% endblock %}
+
+{% block content %}
+    <h1>Admin Panel</h1>
+
+    <h2>Befehl ausführen:</h2>
+    <form method="POST">
+        <input type="hidden" name="csrf_token" value="{{ csrf.generate_csrf_token() }}">
+        <input type="text" name="command" placeholder="Befehl eingeben">
+        <button type="submit">Ausführen</button>
+    </form>
+
+    <h2>Logs:</h2>
+    <ul>
+        {% for log in logs %}
+            <li>{{ log.command }} ({{ log.timestamp }}) by {{ log.user }}: {{ log.result }}</li>
+        {% endfor %}
+    </ul>
+
+    <canvas id="userChart"></canvas>
+
+    <a href="{{ url_for('api_keys') }}">API-Schlüssel verwalten</a>
+    <a href="{{ url_for('users') }}">Benutzer verwalten</a>
+{% endblock %}

@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>404 - Seite nicht gefunden</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>404 - Seite nicht gefunden</h1>
+    <p>Die angeforderte Seite konnte nicht gefunden werden. Bitte überprüfen Sie die URL oder kehren Sie zur Startseite zurück.</p>
+    <a href="{{ url_for('admin_panel') }}">Zurück zum Admin Panel</a>
+</body>
+</html>

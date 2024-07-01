@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block title %}Suchergebnisse{% endblock %}
+
+{% block content %}
+    <h1>Suchergebnisse</h1>
+
+    <h2>Logs:</h2>
+    <ul>
+        {% for log
+
+ in logs %}
+            <li>{{ log.command }} ({{ log.timestamp }}) by {{ log.user }}: {{ log.result }}</li>
+        {% endfor %}
+    </ul>
+
+    <h2>API-Schlüssel:</h2>
+    <ul>
+        {% for key in api_keys %}
+            <li>{{ key.key_name }}: {{ key.api_key }}</li>
+        {% endfor %}
+    </ul>
+
+    <h2>Benutzer:</h2>
+    <ul>
+        {% for user in users %}
+            <li>{{ user.key }}: {{ user.email }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}
