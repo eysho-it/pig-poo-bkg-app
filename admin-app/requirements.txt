@@ -1,0 +1,6 @@
+Flask==2.0.1
+paypalrestsdk==1.14.0
+
+deta==1.1.0
+
+python-dotenv

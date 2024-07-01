@@ -1,0 +1,9 @@
+runtime: python3.11
+
+environment:
+
+  DETA_PROJECT_KEY: "your-deta-project-key"
+
+  PAYPAL_CLIENT_ID: "AcXiSCC4RGvNKGrH0phBXjRkcuqErqNE_Yn-9pKCPWCrnb1FGkZgH2ORbBhqB9P8rqC1oV2yDkWXajiZ"
+
+  PAYPAL_CLIENT_SECRET: "EF1Cl1XWbgaKmh8FEEEKWfScct4eRfOk9kdXVPTfpmhNj4lAe0PeKTUQFT5hdy_1CPC8kA489kVef9KC"

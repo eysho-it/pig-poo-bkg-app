@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <title>Abonnements verwalten</title>
+</head>
+<body>
+    <h1>Abonnements verwalten</h1>
+    <form method="post" action="{{ url_for('subscriptions') }}">
+        <label for="user_id">Benutzer ID:</label>
+        <input type="text" id="user_id" name="user_id" required>
+        <label for="subscription_plan">Abonnementstufe:</label>
+        <select id="subscription_plan" name="subscription_plan" required>
+            <option value="Free">Free</option>
+           
+
+ <option value="Basic">Basic</option>
+            <option value="Pro">Pro</option>
+            <option value="Premium">Premium</option>
+            <option value="Team">Team</option>
+            <option value="Enterprise">Enterprise</option>
+            <option value="Micro">Micro</option>
+        </select>
+        <button type="submit">Abonnement aktualisieren</button>
+    </form>
+    <a href="{{ url_for('admin_panel') }}">Zurück zum Admin Panel</a>
+</body>
+</html>
